@@ -18,12 +18,6 @@ redColor = 0xff0000
 
 @bing.event
 async def on_ready():
-  print("██████╗ ██╗███╗   ██╗ ██████╗ ")
-  print("██╔══██╗██║████╗  ██║██╔════╝ ")
-  print("██████╔╝██║██╔██╗ ██║██║  ███╗")
-  print("██╔══██╗██║██║╚██╗██║██║   ██║")
-  print("██████╔╝██║██║ ╚████║╚██████╔╝")
-  print("╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ")
   await bing.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="/verify | bing#0001"), status=discord.Status.dnd)
 
 @bing.slash_command(name="verify", description="Verify to access the server")
