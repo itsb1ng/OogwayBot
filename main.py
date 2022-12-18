@@ -1,5 +1,4 @@
 from dotenv import load_dotenv
-from datetime import datetime
 from discord.ext import commands, tasks
 import discord
 from discord.commands import Option
@@ -11,7 +10,6 @@ import time
 load_dotenv()
 
 token = os.getenv('TOKEN')
-print(token)
 
 intents = discord.Intents.all()
 bing = commands.Bot(command_prefix='o!', intents=intents)
