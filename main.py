@@ -11,6 +11,7 @@ import time
 load_dotenv()
 
 token = os.getenv('TOKEN')
+print(token)
 
 intents = discord.Intents.all()
 bing = commands.Bot(command_prefix='o!', intents=intents)
